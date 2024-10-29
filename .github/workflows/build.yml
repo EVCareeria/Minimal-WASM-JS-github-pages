@@ -59,4 +59,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./web  # This should point to your `web` directory where `dist` is located
+          publish_dir: ./web/dist
