@@ -34,3 +34,20 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          target: wasm32-unknown-unknown
+
+      - name: Install wasm-pack
+        run: |
+          curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+
+      - name: Build project with wasm-pack
+        run: wasm-pack build --target web --out-dir web/dist
