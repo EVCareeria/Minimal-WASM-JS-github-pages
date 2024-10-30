@@ -7,3 +7,5 @@
         - web / root
 
 Built with wasm-pack build --target web --out-dir web/dist
+
+## URL https://evcareeria.github.io/testing_wasm/
