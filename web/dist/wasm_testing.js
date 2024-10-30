@@ -46,6 +46,14 @@ function takeObject(idx) {
     dropObject(idx);
     return ret;
 }
+/**
+ * @param {number} counter_value
+ * @returns {number}
+ */
+export function add_one(counter_value) {
+    const ret = wasm.add_one(counter_value);
+    return ret >>> 0;
+}
 
 export function run() {
     wasm.run();

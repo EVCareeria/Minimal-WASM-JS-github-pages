@@ -1,5 +1,10 @@
 /* tslint:disable */
 /* eslint-disable */
+/**
+ * @param {number} counter_value
+ * @returns {number}
+ */
+export function add_one(counter_value: number): number;
 export function run(): void;
 export function greet(): void;
 
@@ -7,6 +12,7 @@ export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembl
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
+  readonly add_one: (a: number) => number;
   readonly run: () => void;
   readonly greet: () => void;
   readonly __wbindgen_start: () => void;
