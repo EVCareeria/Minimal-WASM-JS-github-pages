@@ -13,6 +13,13 @@ macro_rules! console_log {
     ($($t:tt)*) => (log(&format_args!($($t)*).to_string()))
 }
 
+#[wasm_bindgen]
+pub fn add_one(counter_value: u32) -> u32 {
+    let mut value: u32 = counter_value;
+    value += 1;
+    value
+}
+
 #[wasm_bindgen(start)]
 fn run() {
     using_a_macro();
