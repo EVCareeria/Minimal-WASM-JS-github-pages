@@ -1,4 +1,4 @@
-# Minimal github pages setup with wasm and vanilla js
+## Minimal github pages setup with wasm and vanilla js
 
 ## Check 'web' branch for included files
 
