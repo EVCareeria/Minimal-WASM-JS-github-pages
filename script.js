@@ -1,4 +1,4 @@
-import init, * as wasm from "./dist/wasm_testing.js";
+import init, * as wasm from "./web/dist/wasm_testing.js";
 await init();
 
 async function run() {
